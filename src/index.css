@@ -2,108 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Identidad BAlzheimer: rojo (corazón), amarillo (sonrisa), carbón y fondos cálidos. */
 
 @layer base {
   :root {
-    --background: 30 40% 98%;
-    --foreground: 210 20% 20%;
+    --background: 40 33% 97%;
+    --foreground: 0 0% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 20%;
+    --card-foreground: 0 0% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 20%;
+    --popover-foreground: 0 0% 14%;
 
-    --primary: 200 60% 55%;
+    /* Rojo del corazón del logo */
+    --primary: 0 78% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 30% 92%;
-    --secondary-foreground: 210 20% 20%;
+    /* Amarillo suave de apoyo */
+    --secondary: 48 85% 92%;
+    --secondary-foreground: 0 0% 18%;
 
-    --muted: 30 25% 95%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 40 25% 94%;
+    --muted-foreground: 0 0% 38%;
 
-    --accent: 35 45% 85%;
-    --accent-foreground: 210 20% 20%;
+    /* Amarillo corporativo (sonrisa) */
+    --accent: 48 95% 52%;
+    --accent-foreground: 0 0% 12%;
 
-    --destructive: 0 70% 60%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
-    --ring: 200 60% 55%;
+    --border: 30 18% 88%;
+    --input: 30 18% 88%;
+    --ring: 0 78% 48%;
 
     --radius: 0.75rem;
-    
-    --warm: 30 40% 94%;
-    --warm-foreground: 210 20% 30%;
-    
-    --hero-gradient: linear-gradient(135deg, hsl(200 50% 85%) 0%, hsl(30 40% 92%) 100%);
-    --card-shadow: 0 2px 20px -5px hsl(200 30% 70% / 0.15);
+
+    --warm: 40 40% 94%;
+    --warm-foreground: 0 0% 22%;
+
+    /* Amarillo marca para chips / labels */
+    --brand: 48 95% 45%;
+    --brand-foreground: 0 0% 12%;
+
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(0 60% 92%) 0%,
+      hsl(48 70% 92%) 55%,
+      hsl(40 40% 96%) 100%
+    );
+    --card-shadow: 0 2px 20px -5px hsl(0 40% 40% / 0.14);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: 0 78% 48%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 48 85% 92%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 30 18% 88%;
+    --sidebar-ring: 0 78% 48%;
   }
 
   .dark {
-    --background: 210 25% 15%;
-    --foreground: 30 30% 95%;
+    --background: 0 0% 8%;
+    --foreground: 40 20% 95%;
 
-    --card: 210 20% 18%;
-    --card-foreground: 30 30% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 210 20% 18%;
-    --popover-foreground: 30 30% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 200 55% 60%;
+    --primary: 0 72% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 25%;
-    --secondary-foreground: 30 30% 95%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 40 20% 95%;
 
-    --muted: 210 20% 22%;
-    --muted-foreground: 30 20% 70%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 40 10% 70%;
 
-    --accent: 35 40% 35%;
-    --accent-foreground: 30 30% 95%;
+    --accent: 48 90% 48%;
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 65% 55%;
+    --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 25%;
-    --input: 210 20% 25%;
-    --ring: 200 55% 60%;
-    
-    --warm: 210 20% 20%;
-    --warm-foreground: 30 30% 85%;
-    
-    --hero-gradient: linear-gradient(135deg, hsl(200 40% 25%) 0%, hsl(210 25% 18%) 100%);
-    --card-shadow: 0 2px 20px -5px hsl(0 0% 0% / 0.3);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 72% 55%;
+
+    --warm: 0 0% 12%;
+    --warm-foreground: 40 20% 90%;
+
+    --brand: 48 95% 52%;
+    --brand-foreground: 0 0% 8%;
+
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(0 40% 18%) 0%,
+      hsl(0 0% 10%) 100%
+    );
+    --card-shadow: 0 2px 20px -5px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 0 72% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 72% 55%;
   }
 }
 
@@ -112,7 +122,19 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Nunito Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Libre Baskerville", Georgia, serif;
   }
 }

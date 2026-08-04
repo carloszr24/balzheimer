@@ -36,7 +36,7 @@ const CollaborateSection = () => {
     <section id="colabora" className="py-20 bg-warm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Colabora con nosotros
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -111,7 +111,7 @@ const CollaborateSection = () => {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                placeholder="+34 600 000 000"
+                placeholder="628 00 00 00"
               />
             </div>
 

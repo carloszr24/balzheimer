@@ -51,6 +51,10 @@ export default {
           DEFAULT: "hsl(var(--warm))",
           foreground: "hsl(var(--warm-foreground))",
         },
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          foreground: "hsl(var(--brand-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -61,6 +65,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ['"Nunito Sans"', "system-ui", "sans-serif"],
+        display: ['"Libre Baskerville"', "Georgia", "serif"],
       },
       boxShadow: {
         'card': 'var(--card-shadow)',
