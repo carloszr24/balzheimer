@@ -1,86 +1,10 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Calendar, FileText, Coffee, BookOpen } from "lucide-react";
-import ImageCarousel, { type CarouselSlide } from "@/components/ImageCarousel";
 import PdfModal from "@/components/PdfModal";
-import activitiesImage from "@/assets/activities.jpg";
-import aboutImage from "@/assets/about-hands.jpg";
-import heroImage from "@/assets/hero-alzheimer.jpg";
-import artTherapyImage from "@/assets/art-therapy.jpg";
-import physicalTherapyImage from "@/assets/physical-therapy.jpg";
-import musicTherapyImage from "@/assets/music-therapy.jpg";
-import familySupportImage from "@/assets/family-support.jpg";
 
 const AssociationSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
-
-  // Slides del carrusel con sus textos asociados
-  const carouselSlides: CarouselSlide[] = [
-    {
-      src: activitiesImage,
-      alt: "Actividades en la asociación",
-      title: "Nuestro trabajo diario",
-      content: [
-        "En nuestra asociación, cada día es una oportunidad para hacer la diferencia. Ofrecemos un centro de día donde las personas con Alzheimer participan en actividades terapéuticas en un ambiente cálido y seguro.",
-        "Nuestros programas están diseñados por profesionales especializados en demencias, asegurando que cada actividad sea beneficiosa y se adapte a las necesidades individuales de cada persona."
-      ]
-    },
-    {
-      src: aboutImage,
-      alt: "Manos unidas en apoyo",
-      title: "Apoyo familiar integral",
-      content: [
-        "Entendemos que el Alzheimer afecta a toda la familia. Por eso, ofrecemos grupos de apoyo y formación especializada para familiares y cuidadores.",
-        "Nadie debe enfrentar esta enfermedad solo. Creamos un espacio de encuentro donde compartir experiencias, aprender estrategias de cuidado y encontrar el apoyo emocional necesario."
-      ]
-    },
-    {
-      src: heroImage,
-      alt: "Eventos especiales de la asociación",
-      title: "Eventos y celebraciones",
-      content: [
-        "Organizamos eventos especiales, talleres y celebraciones que fortalecen los vínculos entre nuestros miembros y la comunidad.",
-        "Cada actividad está pensada para generar momentos significativos, promover la integración social y visibilizar la importancia del cuidado digno y el respeto hacia las personas con Alzheimer."
-      ]
-    },
-    {
-      src: artTherapyImage,
-      alt: "Taller de arte terapia",
-      title: "Talleres de estimulación cognitiva",
-      content: [
-        "La creatividad es una herramienta poderosa. Nuestros talleres de arte y manualidades estimulan la memoria, mejoran la coordinación y fomentan la expresión personal.",
-        "A través de la pintura, el dibujo y otras actividades artísticas, las personas con Alzheimer encuentran una vía para comunicarse y mantener activas sus capacidades cognitivas en un ambiente de disfrute y bienestar."
-      ]
-    },
-    {
-      src: physicalTherapyImage,
-      alt: "Terapia física y ejercicio",
-      title: "Actividad física adaptada",
-      content: [
-        "El movimiento es vida. Ofrecemos sesiones de ejercicio físico adaptado que mejoran la movilidad, el equilibrio y el bienestar general de nuestros usuarios.",
-        "Bajo la supervisión de fisioterapeutas especializados, cada persona participa en actividades diseñadas según sus capacidades, promoviendo la autonomía y previniendo el deterioro físico."
-      ]
-    },
-    {
-      src: musicTherapyImage,
-      alt: "Sesión de musicoterapia",
-      title: "Musicoterapia",
-      content: [
-        "La música tiene el poder de despertar recuerdos y emociones. Nuestras sesiones de musicoterapia conectan a las personas con su historia personal y generan momentos de alegría compartida.",
-        "Cantar, escuchar y tocar instrumentos no solo estimula la memoria, sino que también fortalece los vínculos afectivos y mejora el estado de ánimo de todos los participantes."
-      ]
-    },
-    {
-      src: familySupportImage,
-      alt: "Grupos de apoyo familiar",
-      title: "Grupos de apoyo y formación",
-      content: [
-        "Cuidar al cuidador es fundamental. Nuestros grupos de apoyo ofrecen un espacio seguro donde familiares y cuidadores pueden compartir sus experiencias, dudas y emociones.",
-        "Organizamos talleres formativos sobre manejo de síntomas, técnicas de comunicación y autocuidado, proporcionando herramientas prácticas para mejorar la calidad de vida tanto de los cuidadores como de las personas afectadas."
-      ]
-    }
-  ];
 
   const activities = [
     {
@@ -116,26 +40,6 @@ const AssociationSection = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Nuestros programas y actividades están diseñados para ofrecer apoyo integral
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="order-2 md:order-1 space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground">
-              {carouselSlides[currentSlide].title}
-            </h3>
-            {carouselSlides[currentSlide].content?.map((paragraph, index) => (
-              <p key={index} className="text-muted-foreground leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-          <div className="order-1 md:order-2">
-            <ImageCarousel 
-              slides={carouselSlides} 
-              autoplayDelay={5000}
-              onSlideChange={setCurrentSlide}
-            />
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
