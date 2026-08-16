@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin, Facebook, Clock } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Facebook, Instagram, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { addressLines, site } from "@/data/site";
 
@@ -72,6 +72,15 @@ const Footer = () => {
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href={site.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href={site.whatsappHref}

@@ -18,15 +18,19 @@ export const site = {
     province: "Córdoba",
     country: "España",
   },
-  phone: "628 92 59 41",
-  phoneHref: "tel:+34628925941",
-  whatsappHref: "https://wa.me/34628925941",
+  phone: "628 925 641",
+  phoneHref: "tel:+34628925641",
+  whatsappHref: "https://wa.me/34628925641",
   email: "balzheimer17@gmail.com",
   emailHref: "mailto:balzheimer17@gmail.com",
   hours: "Lunes a viernes, de 10:00 a 13:00",
   facebook: {
     url: "https://www.facebook.com/Balzheime/",
     label: "Asoc. Alzheimer – Palma del Río Balzheimer",
+  },
+  instagram: {
+    url: "https://www.instagram.com/balzheimer/",
+    label: "Asociación BAlzheimer en Instagram",
   },
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=C.+Gracia,+1,+14700+Palma+del+R%C3%ADo,+C%C3%B3rdoba",
