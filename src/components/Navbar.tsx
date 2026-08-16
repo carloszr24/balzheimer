@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import DonationModal from "@/components/DonationModal";
 import logo from "@/assets/logo.png";
 import { site } from "@/data/site";
 
@@ -61,6 +63,13 @@ const Navbar = () => {
             >
               La enfermedad
             </button>
+            <DonationModal
+              trigger={
+                <Button variant="hero" size="sm" className="uppercase">
+                  Colabora
+                </Button>
+              }
+            />
           </div>
 
           <button
@@ -90,6 +99,17 @@ const Navbar = () => {
               >
                 La enfermedad
               </button>
+              <DonationModal
+                trigger={
+                  <Button
+                    variant="hero"
+                    className="w-full uppercase mt-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Colabora
+                  </Button>
+                }
+              />
             </div>
           </div>
         )}
