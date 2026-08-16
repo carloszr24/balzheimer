@@ -32,8 +32,8 @@ const HeroSection = () => {
             {site.tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button onClick={() => scrollTo("colabora")} variant="hero" size="lg">
-              Colabora con nosotros
+            <Button asChild variant="hero" size="lg">
+              <a href={site.emailHref}>Contacta con nosotros</a>
             </Button>
             <Button onClick={() => scrollTo("novedades")} variant="soft" size="lg">
               Ver novedades

@@ -7,7 +7,6 @@ import NewsSection from "@/components/sections/NewsSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import DiseaseSection from "@/components/sections/DiseaseSection";
-import CollaborateSection from "@/components/sections/CollaborateSection";
 
 const Index = () => {
   const location = useLocation();
@@ -31,7 +30,6 @@ const Index = () => {
         <AboutSection />
         <ServicesSection />
         <DiseaseSection />
-        <CollaborateSection />
       </main>
       <Footer />
     </div>

@@ -15,7 +15,6 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { site } from "@/data/site";
 
 const stages = [
@@ -288,12 +287,6 @@ const AboutDisease = () => {
                 </a>
               </Button>
             </div>
-            <Link
-              to="/#colabora"
-              className="inline-block mt-6 text-primary-foreground underline underline-offset-4 hover:opacity-80 transition-opacity"
-            >
-              O escríbenos a través del formulario de contacto
-            </Link>
           </div>
         </section>
       </main>

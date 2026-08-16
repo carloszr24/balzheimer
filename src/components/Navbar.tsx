@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { site } from "@/data/site";
 
@@ -62,14 +61,6 @@ const Navbar = () => {
             >
               La enfermedad
             </button>
-            <Button
-              onClick={() => scrollToSection("colabora")}
-              variant="hero"
-              size="sm"
-              className="uppercase"
-            >
-              Colabora
-            </Button>
           </div>
 
           <button
@@ -99,13 +90,6 @@ const Navbar = () => {
               >
                 La enfermedad
               </button>
-              <Button
-                onClick={() => scrollToSection("colabora")}
-                variant="hero"
-                className="w-full uppercase mt-2"
-              >
-                Colabora
-              </Button>
             </div>
           </div>
         )}
