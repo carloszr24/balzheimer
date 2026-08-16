@@ -2,9 +2,34 @@ import { Heart, Mail, Phone, MapPin, Facebook, Instagram, Clock } from "lucide-r
 import logo from "@/assets/logo.png";
 import { addressLines, site } from "@/data/site";
 
+const collaborators = [
+  { src: "/logo-ayuntamiento-palma.png", alt: "Ayuntamiento de Palma del Río" },
+  { src: "/logo-ceafa.png", alt: "CEAFA - Confederación Española de Asociaciones de Familiares de Personas con Alzheimer" },
+  { src: "/logo-ministerio-sanidad.png", alt: "Ministerio de Sanidad, Servicios Sociales e Igualdad" },
+  { src: "/logo-junta-andalucia.png", alt: "Junta de Andalucía" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-warm border-t border-border mt-20">
+      <div className="bg-card border-b border-border py-8">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+            Con la colaboración de
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {collaborators.map((collaborator) => (
+              <img
+                key={collaborator.src}
+                src={collaborator.src}
+                alt={collaborator.alt}
+                className="h-14 sm:h-16 w-auto object-contain"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
