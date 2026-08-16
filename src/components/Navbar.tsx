@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { site } from "@/data/site";
@@ -9,14 +10,24 @@ const navItems = [
   { id: "novedades", label: "Novedades" },
   { id: "quienes-somos", label: "Quiénes somos" },
   { id: "la-asociacion", label: "La asociación" },
-  { id: "la-enfermedad", label: "La enfermedad" },
 ] as const;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
+
+  const goToDiseasePage = () => {
+    navigate("/sobre-el-alzheimer");
     setIsOpen(false);
   };
 
@@ -45,6 +56,12 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={goToDiseasePage}
+              className="text-sm text-foreground hover:text-primary transition-colors uppercase tracking-wide"
+            >
+              La enfermedad
+            </button>
             <Button
               onClick={() => scrollToSection("colabora")}
               variant="hero"
@@ -76,6 +93,12 @@ const Navbar = () => {
                   {item.label}
                 </button>
               ))}
+              <button
+                onClick={goToDiseasePage}
+                className="text-left text-foreground hover:text-primary transition-colors py-2 uppercase tracking-wide"
+              >
+                La enfermedad
+              </button>
               <Button
                 onClick={() => scrollToSection("colabora")}
                 variant="hero"

@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Brain, AlertCircle, Heart, FileText } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const DiseaseSection = () => {
   return (
@@ -107,6 +109,12 @@ const DiseaseSection = () => {
             </AccordionItem>
           </Accordion>
         </Card>
+
+        <div className="text-center mt-10">
+          <Button asChild variant="hero" size="lg">
+            <Link to="/sobre-el-alzheimer">Saber más sobre el Alzheimer</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
